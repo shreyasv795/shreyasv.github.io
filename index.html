@@ -4,393 +4,777 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>SHREYAS | Bodybuilding & Fitness</title>
+    <title>Shreyas Company | Careers</title>
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: Arial, sans-serif;
         }
 
         body {
-            background: #050b14;
-            color: white;
-            line-height: 1.6;
+            background: #f5f8fc;
+            color: #222;
         }
 
         /* NAVBAR */
+
         nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(3, 10, 20, 0.95);
+            background: #062f5c;
+            color: white;
             padding: 18px 8%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            z-index: 1000;
-            border-bottom: 1px solid #12345a;
         }
 
         .logo {
-            font-size: 28px;
+            font-size: 27px;
             font-weight: bold;
-            color: #1597ff;
-            letter-spacing: 2px;
         }
 
-        nav a {
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav ul li a {
             color: white;
             text-decoration: none;
-            margin-left: 25px;
-            font-weight: bold;
+            font-size: 16px;
         }
 
-        nav a:hover {
-            color: #1597ff;
+        nav ul li a:hover {
+            color: #ffd700;
         }
+
+        .apply-top {
+            background: #ffd700;
+            color: #062f5c;
+            padding: 10px 18px;
+            border-radius: 5px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
 
         /* HERO */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 120px 20px 60px;
-            background:
-                linear-gradient(rgba(0, 20, 45, 0.75), rgba(2, 7, 15, 0.95)),
-                radial-gradient(circle at center, #075ca8, #050b14 65%);
-        }
 
-        .hero-content {
-            max-width: 850px;
+        .hero {
+            background: linear-gradient(
+                rgba(6, 47, 92, 0.9),
+                rgba(6, 47, 92, 0.9)
+            );
+
+            color: white;
+            padding: 90px 8%;
+            text-align: center;
         }
 
         .hero h1 {
-            font-size: clamp(50px, 9vw, 100px);
-            text-transform: uppercase;
-            color: white;
-            letter-spacing: 5px;
-            text-shadow: 0 0 30px #087cff;
+            font-size: 50px;
+            margin-bottom: 20px;
         }
 
-        .hero h2 {
-            color: #1597ff;
-            font-size: 28px;
-            margin: 10px 0;
-            text-transform: uppercase;
+        .hero h1 span {
+            color: #ffd700;
         }
 
         .hero p {
-            font-size: 19px;
-            color: #d5eaff;
-            margin: 20px auto 30px;
-            max-width: 650px;
+            font-size: 20px;
+            max-width: 750px;
+            margin: auto;
+            line-height: 1.6;
         }
 
-        .btn {
+        .hero-button {
             display: inline-block;
-            padding: 14px 30px;
-            background: #087cff;
-            color: white;
+            margin-top: 30px;
+            background: #ffd700;
+            color: #062f5c;
+            padding: 15px 30px;
+            border-radius: 6px;
             text-decoration: none;
-            border-radius: 30px;
             font-weight: bold;
-            margin: 8px;
-            box-shadow: 0 0 20px rgba(8,124,255,0.5);
-            transition: 0.3s;
         }
 
-        .btn:hover {
-            background: #0060cc;
-            transform: translateY(-3px);
-        }
 
-        .btn-outline {
-            background: transparent;
-            border: 2px solid #087cff;
-        }
+        /* SECTION */
 
-        /* SECTIONS */
-        section {
-            padding: 80px 8%;
-        }
-
-        .section-title {
+        .section {
+            padding: 65px 8%;
             text-align: center;
-            margin-bottom: 50px;
         }
 
-        .section-title h2 {
-            font-size: 42px;
-            color: #1597ff;
-            text-transform: uppercase;
+        .section h2 {
+            font-size: 36px;
+            color: #062f5c;
+            margin-bottom: 15px;
         }
 
-        .section-title p {
-            color: #a9c8e5;
+        .section-description {
+            color: #666;
+            margin-bottom: 40px;
         }
 
-        /* CARDS */
-        .cards {
+
+        /* JOB CARDS */
+
+        .jobs {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 25px;
-            max-width: 1100px;
-            margin: auto;
         }
 
-        .card {
-            background: linear-gradient(145deg, #0b1c30, #07111e);
+        .job-card {
+            background: white;
             padding: 35px 25px;
-            border-radius: 15px;
-            text-align: center;
-            border: 1px solid #123f69;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
             transition: 0.3s;
         }
 
-        .card:hover {
+        .job-card:hover {
             transform: translateY(-8px);
-            border-color: #1597ff;
-            box-shadow: 0 10px 30px rgba(0, 119, 255, 0.2);
         }
 
-        .card .icon {
+        .job-icon {
             font-size: 45px;
             margin-bottom: 15px;
         }
 
-        .card h3 {
-            color: #1597ff;
-            font-size: 23px;
+        .job-card h3 {
+            color: #062f5c;
+            margin-bottom: 15px;
+        }
+
+        .job-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+
+        /* ELIGIBILITY */
+
+        .eligibility {
+            background: #062f5c;
+            color: white;
+            padding: 70px 8%;
+            text-align: center;
+        }
+
+        .eligibility h2 {
+            font-size: 36px;
+            margin-bottom: 35px;
+        }
+
+        .eligibility-boxes {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .eligibility-box {
+            background: white;
+            color: #222;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .eligibility-box h3 {
+            color: #062f5c;
+            margin-bottom: 15px;
+        }
+
+        .eligibility-box p {
+            line-height: 1.6;
+        }
+
+
+        /* SKILLS */
+
+        .skills {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .skill {
+            background: #eaf1f9;
+            color: #062f5c;
+            padding: 18px 30px;
+            border-radius: 30px;
+            font-weight: bold;
+        }
+
+
+        /* BENEFITS */
+
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .benefit {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.07);
+        }
+
+        .benefit h3 {
+            color: #062f5c;
+            margin: 10px 0;
+        }
+
+
+        /* APPLICATION */
+
+        .application {
+            background: #eef4fa;
+            padding: 70px 8%;
+        }
+
+        .application h2 {
+            text-align: center;
+            color: #062f5c;
+            font-size: 36px;
+            margin-bottom: 35px;
+        }
+
+        .form {
+            max-width: 650px;
+            margin: auto;
+            background: white;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .form input,
+        .form select,
+        .form textarea {
+            width: 100%;
+            padding: 14px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form button {
+            width: 100%;
+            padding: 15px;
+            background: #062f5c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 17px;
+            cursor: pointer;
+        }
+
+        .form button:hover {
+            background: #0b4c91;
+        }
+
+
+        /* FOOTER */
+
+        footer {
+            background: #031f3d;
+            color: white;
+            text-align: center;
+            padding: 35px;
+        }
+
+        footer h3 {
+            font-size: 25px;
             margin-bottom: 10px;
         }
 
-        .card p {
-            color: #b8cee3;
+        footer p {
+            margin: 8px;
         }
 
-        /* MOTIVATION */
-        .motivation {
-            text-align: center;
-            background: linear-gradient(135deg, #06172a, #003d75);
-        }
-
-        .motivation h2 {
-            font-size: 45px;
-            text-transform: uppercase;
-        }
-
-        .motivation span {
-            color: #1597ff;
-        }
-
-        .motivation p {
-            max-width: 700px;
-            margin: 20px auto;
-            color: #d5eaff;
-            font-size: 18px;
-        }
-
-        /* CONTACT */
-        .contact {
-            text-align: center;
-        }
-
-        .phone {
-            display: inline-block;
-            font-size: 30px;
-            color: #1597ff;
-            font-weight: bold;
-            margin: 20px;
-            text-decoration: none;
-        }
-
-        /* FOOTER */
-        footer {
-            text-align: center;
-            padding: 25px;
-            background: #02070d;
-            color: #7895ad;
-            border-top: 1px solid #12345a;
-        }
 
         /* MOBILE */
-        @media (max-width: 768px) {
+
+        @media(max-width: 800px) {
+
             nav {
-                padding: 15px 5%;
+                flex-direction: column;
+                gap: 20px;
             }
 
-            nav a {
-                margin-left: 10px;
-                font-size: 13px;
-            }
-
-            .cards {
-                grid-template-columns: 1fr;
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
             }
 
             .hero h1 {
-                font-size: 55px;
+                font-size: 38px;
             }
 
-            .hero h2 {
-                font-size: 21px;
+            .jobs {
+                grid-template-columns: 1fr;
             }
 
-            .section-title h2 {
-                font-size: 32px;
+            .eligibility-boxes {
+                grid-template-columns: 1fr;
+            }
+
+            .benefits {
+                grid-template-columns: 1fr 1fr;
             }
         }
+
+        @media(max-width: 500px) {
+
+            .benefits {
+                grid-template-columns: 1fr;
+            }
+        }
+
     </style>
 </head>
 
+
 <body>
 
-    <!-- NAVIGATION -->
-    <nav>
-        <div class="logo">SHREYAS</div>
 
-        <div>
-            <a href="#home">Home</a>
-            <a href="#training">Training</a>
-            <a href="#contact">Contact</a>
-        </div>
-    </nav>
+<!-- NAVIGATION -->
 
+<nav>
 
-    <!-- HERO -->
-    <section class="hero" id="home">
-        <div class="hero-content">
+    <div class="logo">
+        Shreyas Company
+    </div>
 
-            <h1>SHREYAS</h1>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#jobs">Jobs</a></li>
+        <li><a href="#eligibility">Eligibility</a></li>
+        <li><a href="#benefits">Benefits</a></li>
+        <li><a href="#apply">Apply</a></li>
+    </ul>
 
-            <h2>Bodybuilding • Strength • Discipline</h2>
+    <a href="#apply" class="apply-top">
+        Apply Now
+    </a>
 
-            <p>
-                Build your body. Build your confidence.
-                Push your limits and become the strongest version of yourself.
-            </p>
-
-            <a href="#training" class="btn">START TRAINING</a>
-
-            <a href="#contact" class="btn btn-outline">CONTACT US</a>
-
-        </div>
-    </section>
+</nav>
 
 
-    <!-- TRAINING -->
-    <section id="training">
+<!-- HERO -->
 
-        <div class="section-title">
-            <h2>Train Like a Champion</h2>
+<section class="hero" id="home">
 
-            <p>
-                Dedicated training for people who are serious about bodybuilding.
-            </p>
-        </div>
+    <h1>
+        Build Your Career With
+        <span>Shreyas Company</span>
+    </h1>
 
-        <div class="cards">
+    <p>
+        We are hiring talented and motivated candidates
+        who want to build a successful career in
+        Accounting, Business Operations and Digital Marketing.
+    </p>
 
-            <div class="card">
-                <div class="icon">💪</div>
+    <a href="#jobs" class="hero-button">
+        View Open Positions
+    </a>
 
-                <h3>Bodybuilding</h3>
+</section>
 
-                <p>
-                    Build muscle, increase strength and develop a powerful physique
-                    through structured bodybuilding training.
-                </p>
+
+<!-- JOBS -->
+
+<section class="section" id="jobs">
+
+    <h2>Current Job Opportunities</h2>
+
+    <p class="section-description">
+        Choose the role that matches your skills and career goals.
+    </p>
+
+
+    <div class="jobs">
+
+
+        <div class="job-card">
+
+            <div class="job-icon">
+                📊
             </div>
 
-
-            <div class="card">
-                <div class="icon">🔥</div>
-
-                <h3>Strength Training</h3>
-
-                <p>
-                    Improve your strength with challenging workouts designed
-                    to help you become stronger every day.
-                </p>
-            </div>
-
-
-            <div class="card">
-                <div class="icon">🏆</div>
-
-                <h3>Fitness Goals</h3>
-
-                <p>
-                    Stay consistent, track your progress and work towards
-                    the physique you have always wanted.
-                </p>
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- MOTIVATION -->
-    <section class="motivation">
-
-        <h2>
-            <span>NO EXCUSES.</span><br>
-            JUST RESULTS.
-        </h2>
-
-        <p>
-            Your transformation starts with one decision.
-            Stay disciplined, train hard and never stop improving.
-        </p>
-
-        <a href="#contact" class="btn">
-            JOIN SHREYAS
-        </a>
-
-    </section>
-
-
-    <!-- CONTACT -->
-    <section class="contact" id="contact">
-
-        <div class="section-title">
-
-            <h2>Get In Touch</h2>
+            <h3>Accounts Executive</h3>
 
             <p>
-                Ready to start your bodybuilding journey?
+                Handle accounting records, invoices,
+                purchase and sales entries and daily
+                financial transactions.
             </p>
 
         </div>
 
-        <a class="phone" href="tel:8088285367">
-            📞 8088285367
-        </a>
 
-        <br>
+        <div class="job-card">
 
-        <a class="btn" href="tel:8088285367">
-            CALL NOW
-        </a>
+            <div class="job-icon">
+                💻
+            </div>
 
-    </section>
+            <h3>Excel Executive</h3>
+
+            <p>
+                Work with Excel spreadsheets, formulas,
+                data management, reports, Pivot Tables
+                and data analysis.
+            </p>
+
+        </div>
 
 
-    <!-- FOOTER -->
-    <footer>
+        <div class="job-card">
 
-        <p>
-            © 2026 SHREYAS Bodybuilding & Fitness.
-            All Rights Reserved.
-        </p>
+            <div class="job-icon">
+                📱
+            </div>
 
-    </footer>
+            <h3>Digital Marketing Executive</h3>
+
+            <p>
+                Work on social media, Google Ads,
+                SEO, content marketing, campaign
+                management and digital analytics.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ELIGIBILITY -->
+
+<section class="eligibility" id="eligibility">
+
+    <h2>Candidate Eligibility</h2>
+
+
+    <div class="eligibility-boxes">
+
+
+        <div class="eligibility-box">
+
+            <h3>🎓 Education</h3>
+
+            <p>
+                Candidates with B.Com, BBA, BCA,
+                BBM or equivalent qualifications
+                can apply.
+            </p>
+
+        </div>
+
+
+        <div class="eligibility-box">
+
+            <h3>💼 Experience</h3>
+
+            <p>
+                Freshers and experienced candidates
+                with relevant skills are welcome
+                to apply.
+            </p>
+
+        </div>
+
+
+        <div class="eligibility-box">
+
+            <h3>🗣️ Communication</h3>
+
+            <p>
+                Basic English communication,
+                willingness to learn and
+                professional attitude are expected.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- REQUIRED SKILLS -->
+
+<section class="section">
+
+    <h2>Skills We Are Looking For</h2>
+
+    <p class="section-description">
+        Candidates should have knowledge of one or more
+        of the following areas.
+    </p>
+
+
+    <div class="skills">
+
+        <div class="skill">
+            Tally Prime
+        </div>
+
+        <div class="skill">
+            MS Excel
+        </div>
+
+        <div class="skill">
+            Digital Marketing
+        </div>
+
+        <div class="skill">
+            Google Ads
+        </div>
+
+        <div class="skill">
+            SEO
+        </div>
+
+        <div class="skill">
+            Social Media Marketing
+        </div>
+
+        <div class="skill">
+            Communication
+        </div>
+
+        <div class="skill">
+            Data Analysis
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- BENEFITS -->
+
+<section class="section" id="benefits">
+
+    <h2>Why Join Shreyas Company?</h2>
+
+    <div class="benefits">
+
+
+        <div class="benefit">
+
+            <div style="font-size:40px;">
+                📚
+            </div>
+
+            <h3>Learning</h3>
+
+            <p>
+                Learn practical skills and
+                improve your professional knowledge.
+            </p>
+
+        </div>
+
+
+        <div class="benefit">
+
+            <div style="font-size:40px;">
+                📈
+            </div>
+
+            <h3>Career Growth</h3>
+
+            <p>
+                Develop your skills and grow
+                with your career.
+            </p>
+
+        </div>
+
+
+        <div class="benefit">
+
+            <div style="font-size:40px;">
+                🤝
+            </div>
+
+            <h3>Professional Team</h3>
+
+            <p>
+                Work with a supportive and
+                professional team.
+            </p>
+
+        </div>
+
+
+        <div class="benefit">
+
+            <div style="font-size:40px;">
+                💼
+            </div>
+
+            <h3>Job Opportunities</h3>
+
+            <p>
+                Build practical experience
+                through real business projects.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- APPLICATION FORM -->
+
+<section class="application" id="apply">
+
+    <h2>Apply For A Position</h2>
+
+
+    <div class="form">
+
+        <input
+            type="text"
+            placeholder="Full Name"
+        >
+
+        <input
+            type="email"
+            placeholder="Email Address"
+        >
+
+        <input
+            type="tel"
+            placeholder="Phone Number"
+        >
+
+
+        <select>
+
+            <option>
+                Select Position
+            </option>
+
+            <option>
+                Accounts Executive
+            </option>
+
+            <option>
+                Excel Executive
+            </option>
+
+            <option>
+                Digital Marketing Executive
+            </option>
+
+        </select>
+
+
+        <select>
+
+            <option>
+                Select Your Skill
+            </option>
+
+            <option>
+                Tally Prime
+            </option>
+
+            <option>
+                MS Excel
+            </option>
+
+            <option>
+                Digital Marketing
+            </option>
+
+            <option>
+                Tally + Excel
+            </option>
+
+            <option>
+                Excel + Digital Marketing
+            </option>
+
+            <option>
+                Tally + Excel + Digital Marketing
+            </option>
+
+        </select>
+
+
+        <textarea
+            rows="5"
+            placeholder="Tell us about your skills"
+        ></textarea>
+
+
+        <button onclick="applyJob()">
+            Submit Application
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h3>Shreyas Company</h3>
+
+    <p>
+        Building careers. Developing talent.
+    </p>
+
+    <p>
+        📧 careers@shreyascompany.com
+    </p>
+
+    <p>
+        📞 +91 80882 85367
+    </p>
+
+    <p>
+        © 2026 Shreyas Company. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+<script>
+
+    function applyJob() {
+
+        alert(
+            "Thank you for applying to Shreyas Company! " +
+            "Our recruitment team will review your application."
+        );
+
+    }
+
+</script>
+
 
 </body>
 </html>
